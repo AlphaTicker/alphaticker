@@ -51,16 +51,19 @@ section[id] { scroll-margin-top: 120px; }
 
 .hero {
   background:
-    linear-gradient(rgba(7, 31, 66, 0.78), rgba(7, 31, 66, 0.78)),
-    url("images/hand-putting-mix-coins-seed-clear-bottle-copyspace-business-investment-growth-concept.jpg") center 43% / cover;
-  color: #fff;
+    linear-gradient(135deg, rgba(235, 245, 255, 0.9), rgba(246, 250, 255, 0.9)),
+    url("images/growth-graph.png") center 43% / cover;
+  color: #0b3d91;
   text-align: center;
   padding: 100px 20px;
 }
 .hero p { max-width: 860px; margin: 0 auto; font-size: 1.2rem; }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: #f5a623;
   color: #222;
   padding: 12px 28px;
@@ -68,8 +71,12 @@ section[id] { scroll-margin-top: 120px; }
   border-radius: 4px;
   font-weight: bold;
 }
-.section { padding: 60px 40px; max-width: 1000px; margin: 0 auto; }
-.section.light { background: #f5f7fa; max-width: none; }
+.button-icon { display: block; width: 18px; height: 18px; object-fit: contain; }
+.section { padding: 60px 40px; }
+.section-team { background: linear-gradient(135deg, #edf8ef, #f8fcf8); }
+.section-platform { background: #eef5ff; }
+.section-services { background: #f7f8f3; }
+.section-content { max-width: 1000px; margin: 0 auto; }
 .section h2 { margin-bottom: 20px; color: #0b3d91; }
 
 .team-layout {
@@ -81,7 +88,8 @@ section[id] { scroll-margin-top: 120px; }
 .team-layout img {
   display: block;
   width: 100%;
-  max-width: 280px;
+  max-width: 140px;
+  margin: 0 auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 25%;
@@ -117,7 +125,7 @@ section[id] { scroll-margin-top: 120px; }
 }
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
   gap: 36px;
   max-width: 1100px;
   margin: 0 auto;
@@ -129,9 +137,12 @@ section[id] { scroll-margin-top: 120px; }
 .footer-column h3 { color: #fff; font-size: 0.95rem; margin-bottom: 14px; }
 .footer-column ul { list-style: none; }
 .footer-column li { margin-bottom: 10px; overflow-wrap: anywhere; }
+.footer-contact li { display: flex; align-items: flex-start; gap: 8px; }
+.footer-contact li img { width: 18px; height: 18px; flex: 0 0 18px; object-fit: contain; filter: brightness(0) invert(1); margin-top: 3px; }
 .footer-column a { color: inherit; text-decoration: none; }
 .footer-column a:hover { color: #fff; }
 .linkedin-link { display: inline-flex; }
+.footer-contact .linkedin-link { align-items: center; gap: 8px; }
 .linkedin-mark {
   display: inline-flex;
   align-items: center;
@@ -145,6 +156,7 @@ section[id] { scroll-margin-top: 120px; }
   font-weight: bold;
   line-height: 1;
 }
+.footer-contact .linkedin-mark { width: 18px; height: 18px; border-radius: 3px; font-size: 0.7rem; }
 .linkedin-link:hover .linkedin-mark { background: #004182; }
 .footer-bottom {
   border-top: 1px solid #354052;
@@ -167,6 +179,6 @@ section[id] { scroll-margin-top: 120px; }
   .footer-bottom { padding: 20px; }
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
-  .footer-content { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 601px) and (max-width: 1100px) {
+  .footer-content { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
 }
